@@ -1,7 +1,7 @@
 Study Design
 ===================
 The data contained in the file Out_mean.table.txt is a summary of the 
-measurement s collected by Davide Anguita et al.
+measurement s collected by Davide Anguita et al [1].
 
 In this summarized dateset, rows are ordered by subject and activity.
 It contains, all together, the train and test data.
@@ -44,8 +44,17 @@ subject.
 For more information about the collected signals, access:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-The variables contained in the Out_mean.table.txt file are the following, in the
-order that they appear in this dataset:
+The variables contained in the Out_mean.table.txt file are listed bellow.
+Raw acceleration signals from the smartphone accelerometer X axis are in standard 
+gravity units 'g'
+
+Raw angular velocity signals, measured by the gyroscope, are in expressed in 
+radian/second.
+
+For this assignment, we did not make use of raw acceleration or angular velocity 
+variables. Instead, we made our summaries on the feature vectors, that were previously
+normalized and bounded within [-1,1].
+
 
 subject
 activity_label
@@ -135,3 +144,5 @@ angle.tBodyGyroJerkMean.gravityMean..Grand
 angle.X.gravityMean..Grand
 angle.Y.gravityMean..Grand
 angle.Z.gravityMean..Grand
+
+[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
