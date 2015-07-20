@@ -1,0 +1,116 @@
+Study Design
+===================
+The data contained in the file Out_mean.table.txt is a summary of the measurement s collected by Davide Anguita et al.
+
+In this summarized dateset, rows are ordered by subject and activity. It contains, all together, the train and test data.
+
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, researches captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually.
+
+Further details regarding the data collection and the study can be found at:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+Code Book
+===================
+The first two columns of the resulting dataset identify the subject, with an integer from 1 to 30, and the six activities with its unique label.
+
+The remaining columns are the average of the mean and standard deviation of the collected signals, grouped by subject and by activity.
+
+We appended the expression ".Grand" to the variable names, indicating that these new variables are the averages of the mean and standard deviation of those collected signals, calculated by subjects and activity. Furthermore, the variable names look slightly different from the raw dataset, due to the option `check.names = TRUE`, from the `read.table` function. When this option is enabled, R checks that the variable names are syntactically valid, and adjusts if necessary.
+
+Since the signals were collected with a 50 Hz frequency, resulting in a enormous amount of raw data, it becomes difficult to study the effects of the factors subject and activity. 
+
+Summarizing it with the averages of the mean and standard deviation enables us to easily compare the magnitudes of the signals according to the activity and the subject.
+
+For more information about the collected signals, access:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+The variables contained in the Out_mean.table.txt file are the following, in the order that they appear in this dataset:
+
+subject
+activity_label
+tBodyAcc.mean...X.Grand
+tBodyAcc.mean...Y.Grand
+tBodyAcc.mean...Z.Grand
+tBodyAcc.std...X.Grand
+tBodyAcc.std...Y.Grand
+tBodyAcc.std...Z.Grand
+tGravityAcc.mean...X.Grand
+tGravityAcc.mean...Y.Grand
+tGravityAcc.mean...Z.Grand
+tGravityAcc.std...X.Grand
+tGravityAcc.std...Y.Grand
+tGravityAcc.std...Z.Grand
+tBodyAccJerk.mean...X.Grand
+tBodyAccJerk.mean...Y.Grand
+tBodyAccJerk.mean...Z.Grand
+tBodyAccJerk.std...X.Grand
+tBodyAccJerk.std...Y.Grand
+tBodyAccJerk.std...Z.Grand
+tBodyGyro.mean...X.Grand
+tBodyGyro.mean...Y.Grand
+tBodyGyro.mean...Z.Grand
+tBodyGyro.std...X.Grand
+tBodyGyro.std...Y.Grand
+tBodyGyro.std...Z.Grand
+tBodyGyroJerk.mean...X.Grand
+tBodyGyroJerk.mean...Y.Grand
+tBodyGyroJerk.mean...Z.Grand
+tBodyGyroJerk.std...X.Grand
+tBodyGyroJerk.std...Y.Grand
+tBodyGyroJerk.std...Z.Grand
+tBodyAccMag.mean...Grand
+tBodyAccMag.std...Grand
+tGravityAccMag.mean...Grand
+tGravityAccMag.std...Grand
+tBodyAccJerkMag.mean...Grand
+tBodyAccJerkMag.std...Grand
+tBodyGyroMag.mean...Grand
+tBodyGyroMag.std...Grand
+tBodyGyroJerkMag.mean...Grand
+tBodyGyroJerkMag.std...Grand
+fBodyAcc.mean...X.Grand
+fBodyAcc.mean...Y.Grand
+fBodyAcc.mean...Z.Grand
+fBodyAcc.std...X.Grand
+fBodyAcc.std...Y.Grand
+fBodyAcc.std...Z.Grand
+fBodyAcc.meanFreq...X.Grand
+fBodyAcc.meanFreq...Y.Grand
+fBodyAcc.meanFreq...Z.Grand
+fBodyAccJerk.mean...X.Grand
+fBodyAccJerk.mean...Y.Grand
+fBodyAccJerk.mean...Z.Grand
+fBodyAccJerk.std...X.Grand
+fBodyAccJerk.std...Y.Grand
+fBodyAccJerk.std...Z.Grand
+fBodyAccJerk.meanFreq...X.Grand
+fBodyAccJerk.meanFreq...Y.Grand
+fBodyAccJerk.meanFreq...Z.Grand
+fBodyGyro.mean...X.Grand
+fBodyGyro.mean...Y.Grand
+fBodyGyro.mean...Z.Grand
+fBodyGyro.std...X.Grand
+fBodyGyro.std...Y.Grand
+fBodyGyro.std...Z.Grand
+fBodyGyro.meanFreq...X.Grand
+fBodyGyro.meanFreq...Y.Grand
+fBodyGyro.meanFreq...Z.Grand
+fBodyAccMag.mean...Grand
+fBodyAccMag.std...Grand
+fBodyAccMag.meanFreq...Grand
+fBodyBodyAccJerkMag.mean...Grand
+fBodyBodyAccJerkMag.std...Grand
+fBodyBodyAccJerkMag.meanFreq...Grand
+fBodyBodyGyroMag.mean...Grand
+fBodyBodyGyroMag.std...Grand
+fBodyBodyGyroMag.meanFreq...Grand
+fBodyBodyGyroJerkMag.mean...Grand
+fBodyBodyGyroJerkMag.std...Grand
+fBodyBodyGyroJerkMag.meanFreq...Grand
+angle.tBodyAccMean.gravity..Grand
+angle.tBodyAccJerkMean..gravityMean..Grand
+angle.tBodyGyroMean.gravityMean..Grand
+angle.tBodyGyroJerkMean.gravityMean..Grand
+angle.X.gravityMean..Grand
+angle.Y.gravityMean..Grand
+angle.Z.gravityMean..Grand
